@@ -1,4 +1,0 @@
-[2024-04-03T17:31:37.423+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.trigger_dag_task manual__2024-04-03T14:08:09.832156+00:00 [failed]> on host C9843
-[2024-04-03T17:31:37.664+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='trigger_dag_task' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T14:08:09.832156+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T14:08:09.832156+00:00'
-[2024-04-03T17:31:37.843+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:31:37.666705+00:00 to become allowed state ['success'] ...
-[2024-04-03T17:31:47.409+0300] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
