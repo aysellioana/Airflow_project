@@ -1,0 +1,40 @@
+[2024-04-03T17:32:15.880+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T14:05:51.794730+00:00 [queued]>
+[2024-04-03T17:32:15.894+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T14:05:51.794730+00:00 [queued]>
+[2024-04-03T17:32:15.895+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-03T17:32:15.927+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-04-03 14:05:51.794730+00:00
+[2024-04-03T17:32:15.932+0300] {standard_task_runner.py:60} INFO - Started process 40723 to run task
+[2024-04-03T17:32:15.942+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-04-03T14:05:51.794730+00:00', '--job-id', '1514', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmphq1q3exe']
+[2024-04-03T17:32:15.946+0300] {standard_task_runner.py:88} INFO - Job 1514: Subtask process_result.sensor_triggered_dag
+[2024-04-03T17:32:16.077+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T14:05:51.794730+00:00 [running]> on host C9843
+[2024-04-03T17:32:16.283+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T14:05:51.794730+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T14:05:51.794730+00:00'
+[2024-04-03T17:32:16.332+0300] {logging_mixin.py:188} INFO - External DAG schedule interval: None
+[2024-04-03T17:32:16.333+0300] {logging_mixin.py:188} INFO - Current DAG schedule interval: None
+[2024-04-03T17:32:16.335+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 240, in poke
+    dttm_filter = self._get_dttm_filter(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 229, in _get_dttm_filter
+    dttm = self._handle_execution_date_fn(context=context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 468, in _handle_execution_date_fn
+    return kwargs_callable(logical_date, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 212, in kwargs_func
+    return func(*args, **kwargs)
+  File "/Users/abatcoveanu/airflow/dags/trigger_dag.py", line 33, in execution_date_fn
+    raise ValueError("Schedule intervals are not set properly")
+ValueError: Schedule intervals are not set properly
+[2024-04-03T17:32:16.374+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240403T140551, start_date=20240403T143215, end_date=20240403T143216
+[2024-04-03T17:32:16.413+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1514 for task process_result.sensor_triggered_dag (Schedule intervals are not set properly; 40723)
+[2024-04-03T17:32:16.458+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-03T17:32:16.523+0300] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

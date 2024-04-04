@@ -1,0 +1,28 @@
+[2024-03-27T15:53:38.850+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.show_databases manual__2024-03-27T10:50:29.492409+00:00 [queued]>
+[2024-03-27T15:53:38.885+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.show_databases manual__2024-03-27T10:50:29.492409+00:00 [queued]>
+[2024-03-27T15:53:38.886+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-27T15:53:38.925+0200] {taskinstance.py:2214} INFO - Executing <Task(PostgresOperator): show_databases> on 2024-03-27 10:50:29.492409+00:00
+[2024-03-27T15:53:38.932+0200] {standard_task_runner.py:60} INFO - Started process 61491 to run task
+[2024-03-27T15:53:38.941+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'show_databases', 'manual__2024-03-27T10:50:29.492409+00:00', '--job-id', '821', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpeoq8pv0d']
+[2024-03-27T15:53:38.944+0200] {standard_task_runner.py:88} INFO - Job 821: Subtask show_databases
+[2024-03-27T15:53:39.159+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.show_databases manual__2024-03-27T10:50:29.492409+00:00 [running]> on host C9843
+[2024-03-27T15:53:39.534+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='show_databases' AIRFLOW_CTX_EXECUTION_DATE='2024-03-27T10:50:29.492409+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-27T10:50:29.492409+00:00'
+[2024-03-27T15:53:39.537+0200] {sql.py:276} INFO - Executing: 
+                SELECT datname
+                FROM pg_database
+                WHERE datistemplate = false
+                ORDER BY datname;
+            
+[2024-03-27T15:53:39.593+0200] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-03-27T15:53:39.677+0200] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-03-27T15:53:39.690+0200] {sql.py:457} INFO - Running statement: 
+                SELECT datname
+                FROM pg_database
+                WHERE datistemplate = false
+                ORDER BY datname;
+            , parameters: [61357485, 'abatcoveanu', datetime.datetime(2024, 3, 27, 15, 53, 36, 348712)]
+[2024-03-27T15:53:39.694+0200] {sql.py:466} INFO - Rows affected: 3
+[2024-03-27T15:53:39.706+0200] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2024-03-27T15:53:39.789+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_id_3, task_id=show_databases, execution_date=20240327T105029, start_date=20240327T135338, end_date=20240327T135339
+[2024-03-27T15:53:39.866+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-27T15:53:39.937+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

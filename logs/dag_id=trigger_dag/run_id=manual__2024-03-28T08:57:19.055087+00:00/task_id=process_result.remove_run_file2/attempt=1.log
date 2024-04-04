@@ -1,0 +1,16 @@
+[2024-03-28T10:58:30.847+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.remove_run_file2 manual__2024-03-28T08:57:19.055087+00:00 [queued]>
+[2024-03-28T10:58:30.856+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.remove_run_file2 manual__2024-03-28T08:57:19.055087+00:00 [queued]>
+[2024-03-28T10:58:30.857+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-28T10:58:30.889+0200] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): process_result.remove_run_file2> on 2024-03-28 08:57:19.055087+00:00
+[2024-03-28T10:58:30.893+0200] {standard_task_runner.py:60} INFO - Started process 3398 to run task
+[2024-03-28T10:58:30.901+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.remove_run_file2', 'manual__2024-03-28T08:57:19.055087+00:00', '--job-id', '1057', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpek1fhw2f']
+[2024-03-28T10:58:30.904+0200] {standard_task_runner.py:88} INFO - Job 1057: Subtask process_result.remove_run_file2
+[2024-03-28T10:58:31.011+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.remove_run_file2 manual__2024-03-28T08:57:19.055087+00:00 [running]> on host C9843
+[2024-03-28T10:58:31.158+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.remove_run_file2' AIRFLOW_CTX_EXECUTION_DATE='2024-03-28T08:57:19.055087+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-28T08:57:19.055087+00:00'
+[2024-03-28T10:58:31.162+0200] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T
+[2024-03-28T10:58:31.163+0200] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'rm /Users/abatcoveanu/airflow/dags/asd']
+[2024-03-28T10:58:31.170+0200] {subprocess.py:86} INFO - Output:
+[2024-03-28T10:58:31.182+0200] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-03-28T10:58:31.237+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=trigger_dag, task_id=process_result.remove_run_file2, execution_date=20240328T085719, start_date=20240328T085830, end_date=20240328T085831
+[2024-03-28T10:58:31.284+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-28T10:58:31.307+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

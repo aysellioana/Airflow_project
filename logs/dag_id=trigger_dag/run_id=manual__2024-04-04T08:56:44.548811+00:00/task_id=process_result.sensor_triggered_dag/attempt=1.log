@@ -1,0 +1,32 @@
+[2024-04-04T11:56:55.801+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T08:56:44.548811+00:00 [queued]>
+[2024-04-04T11:56:55.812+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T08:56:44.548811+00:00 [queued]>
+[2024-04-04T11:56:55.812+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T11:56:55.840+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-04-04 08:56:44.548811+00:00
+[2024-04-04T11:56:55.845+0300] {standard_task_runner.py:60} INFO - Started process 45805 to run task
+[2024-04-04T11:56:55.854+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-04-04T08:56:44.548811+00:00', '--job-id', '1773', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpht3w2ym1']
+[2024-04-04T11:56:55.858+0300] {standard_task_runner.py:88} INFO - Job 1773: Subtask process_result.sensor_triggered_dag
+[2024-04-04T11:56:55.992+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T08:56:44.548811+00:00 [running]> on host C9843
+[2024-04-04T11:56:56.162+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:56:44.548811+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:56:44.548811+00:00'
+[2024-04-04T11:56:56.190+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 241, in poke
+    serialized_dttm_filter = ",".join(dt.isoformat() for dt in dttm_filter)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 241, in <genexpr>
+    serialized_dttm_filter = ",".join(dt.isoformat() for dt in dttm_filter)
+AttributeError: 'NoneType' object has no attribute 'isoformat'
+[2024-04-04T11:56:56.205+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240404T085644, start_date=20240404T085655, end_date=20240404T085656
+[2024-04-04T11:56:56.236+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1773 for task process_result.sensor_triggered_dag ('NoneType' object has no attribute 'isoformat'; 45805)
+[2024-04-04T11:56:56.281+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-04T11:56:56.342+0300] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

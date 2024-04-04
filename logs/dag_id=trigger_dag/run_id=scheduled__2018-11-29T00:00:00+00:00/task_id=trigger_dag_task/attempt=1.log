@@ -1,0 +1,14 @@
+[2024-04-04T11:19:51.777+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-29T00:00:00+00:00 [queued]>
+[2024-04-04T11:19:51.790+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-29T00:00:00+00:00 [queued]>
+[2024-04-04T11:19:51.791+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T11:19:51.819+0300] {taskinstance.py:2214} INFO - Executing <Task(TriggerDagRunOperator): trigger_dag_task> on 2018-11-29 00:00:00+00:00
+[2024-04-04T11:19:51.825+0300] {standard_task_runner.py:60} INFO - Started process 30593 to run task
+[2024-04-04T11:19:51.833+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'trigger_dag_task', 'scheduled__2018-11-29T00:00:00+00:00', '--job-id', '1657', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpypot1rgf']
+[2024-04-04T11:19:51.836+0300] {standard_task_runner.py:88} INFO - Job 1657: Subtask trigger_dag_task
+[2024-04-04T11:19:51.966+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-29T00:00:00+00:00 [running]> on host C9843
+[2024-04-04T11:19:52.118+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='trigger_dag_task' AIRFLOW_CTX_EXECUTION_DATE='2018-11-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2018-11-29T00:00:00+00:00'
+[2024-04-04T11:19:52.270+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-04 08:19:52.120909+00:00 to become allowed state ['success'] ...
+[2024-04-04T11:20:52.292+0300] {trigger_dagrun.py:223} INFO - dag_id_3 finished with allowed state success
+[2024-04-04T11:20:52.321+0300] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=trigger_dag, task_id=trigger_dag_task, execution_date=20181129T000000, start_date=20240404T081951, end_date=20240404T082052
+[2024-04-04T11:20:52.356+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T11:20:52.415+0300] {taskinstance.py:3309} INFO - 2 downstream tasks scheduled from follow-on schedule check

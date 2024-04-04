@@ -1,0 +1,17 @@
+[2024-03-06T09:49:58.930+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2024-03-05T00:00:00+00:00 [queued]>
+[2024-03-06T09:49:58.935+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2024-03-05T00:00:00+00:00 [queued]>
+[2024-03-06T09:49:58.935+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-06T09:49:58.945+0200] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): also_run_this> on 2024-03-05 00:00:00+00:00
+[2024-03-06T09:49:58.949+0200] {standard_task_runner.py:60} INFO - Started process 2168 to run task
+[2024-03-06T09:49:58.955+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'example_bash_operator', 'also_run_this', 'scheduled__2024-03-05T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', '/usr/local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp0s4jfvq0']
+[2024-03-06T09:49:58.956+0200] {standard_task_runner.py:88} INFO - Job 12: Subtask also_run_this
+[2024-03-06T09:49:59.001+0200] {task_command.py:423} INFO - Running <TaskInstance: example_bash_operator.also_run_this scheduled__2024-03-05T00:00:00+00:00 [running]> on host C9843
+[2024-03-06T09:49:59.052+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='example_bash_operator' AIRFLOW_CTX_TASK_ID='also_run_this' AIRFLOW_CTX_EXECUTION_DATE='2024-03-05T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-05T00:00:00+00:00'
+[2024-03-06T09:49:59.054+0200] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T
+[2024-03-06T09:49:59.055+0200] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "ti_key=example_bash_operator__also_run_this__20240305"']
+[2024-03-06T09:49:59.060+0200] {subprocess.py:86} INFO - Output:
+[2024-03-06T09:49:59.064+0200] {subprocess.py:93} INFO - ti_key=example_bash_operator__also_run_this__20240305
+[2024-03-06T09:49:59.065+0200] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-03-06T09:49:59.082+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=example_bash_operator, task_id=also_run_this, execution_date=20240305T000000, start_date=20240306T074958, end_date=20240306T074959
+[2024-03-06T09:49:59.131+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-06T09:49:59.151+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

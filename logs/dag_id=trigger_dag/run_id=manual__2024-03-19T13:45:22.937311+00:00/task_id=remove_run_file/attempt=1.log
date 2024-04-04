@@ -1,0 +1,27 @@
+[2024-03-19T16:19:30.343+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.remove_run_file manual__2024-03-19T13:45:22.937311+00:00 [queued]>
+[2024-03-19T16:19:30.352+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.remove_run_file manual__2024-03-19T13:45:22.937311+00:00 [queued]>
+[2024-03-19T16:19:30.353+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-19T16:19:30.382+0200] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): remove_run_file> on 2024-03-19 13:45:22.937311+00:00
+[2024-03-19T16:19:30.386+0200] {standard_task_runner.py:60} INFO - Started process 61551 to run task
+[2024-03-19T16:19:30.393+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'remove_run_file', 'manual__2024-03-19T13:45:22.937311+00:00', '--job-id', '448', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpbzpcvikp']
+[2024-03-19T16:19:30.396+0200] {standard_task_runner.py:88} INFO - Job 448: Subtask remove_run_file
+[2024-03-19T16:19:30.526+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.remove_run_file manual__2024-03-19T13:45:22.937311+00:00 [running]> on host C9843
+[2024-03-19T16:19:30.651+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='remove_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-03-19T13:45:22.937311+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-19T13:45:22.937311+00:00'
+[2024-03-19T16:19:30.655+0200] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T
+[2024-03-19T16:19:30.656+0200] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'rm /my_new_dag_2/run']
+[2024-03-19T16:19:30.662+0200] {subprocess.py:86} INFO - Output:
+[2024-03-19T16:19:30.677+0200] {subprocess.py:93} INFO - rm: /my_new_dag_2/run: No such file or directory
+[2024-03-19T16:19:30.677+0200] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-03-19T16:19:30.692+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-03-19T16:19:30.698+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=remove_run_file, execution_date=20240319T134522, start_date=20240319T141930, end_date=20240319T141930
+[2024-03-19T16:19:30.730+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 448 for task remove_run_file (Bash command failed. The command returned a non-zero exit code 1.; 61551)
+[2024-03-19T16:19:30.775+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-19T16:19:30.797+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

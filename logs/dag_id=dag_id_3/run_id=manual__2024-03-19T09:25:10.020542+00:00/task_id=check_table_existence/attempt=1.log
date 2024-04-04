@@ -1,0 +1,42 @@
+[2024-03-19T11:25:17.092+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.check_table_existence manual__2024-03-19T09:25:10.020542+00:00 [queued]>
+[2024-03-19T11:25:17.116+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.check_table_existence manual__2024-03-19T09:25:10.020542+00:00 [queued]>
+[2024-03-19T11:25:17.117+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-19T11:25:17.129+0200] {taskinstance.py:2214} INFO - Executing <Task(BranchPythonOperator): check_table_existence> on 2024-03-19 09:25:10.020542+00:00
+[2024-03-19T11:25:17.133+0200] {standard_task_runner.py:60} INFO - Started process 13218 to run task
+[2024-03-19T11:25:17.140+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'check_table_existence', 'manual__2024-03-19T09:25:10.020542+00:00', '--job-id', '325', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmptua16qxv']
+[2024-03-19T11:25:17.143+0200] {standard_task_runner.py:88} INFO - Job 325: Subtask check_table_existence
+[2024-03-19T11:25:17.236+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.check_table_existence manual__2024-03-19T09:25:10.020542+00:00 [running]> on host C9843
+[2024-03-19T11:25:17.384+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='check_table_existence' AIRFLOW_CTX_EXECUTION_DATE='2024-03-19T09:25:10.020542+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-19T09:25:10.020542+00:00'
+[2024-03-19T11:25:17.388+0200] {logging_mixin.py:188} INFO - asdddd
+[2024-03-19T11:25:17.417+0200] {base.py:83} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-03-19T11:25:17.418+0200] {logging_mixin.py:188} INFO - postgresql://postgres:***@postgres/***
+[2024-03-19T11:25:17.427+0200] {base.py:83} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-03-19T11:25:17.474+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/python.py", line 234, in execute
+    return self.do_branch(context, super().execute(context))
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/abatcoveanu/airflow/dags/jobs_dag.py", line 37, in check_table_existence
+    table_exists = hook.get_first(sql_query)
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 276, in get_first
+    return self.run(sql=sql, parameters=parameters, handler=fetch_one_handler)
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 397, in run
+    with closing(self.get_conn()) as conn:
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 161, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/usr/local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: nodename nor servname provided, or not known
+
+[2024-03-19T11:25:17.489+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dag_id_3, task_id=check_table_existence, execution_date=20240319T092510, start_date=20240319T092517, end_date=20240319T092517
+[2024-03-19T11:25:17.528+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 325 for task check_table_existence (could not translate host name "postgres" to address: nodename nor servname provided, or not known
+; 13218)
+[2024-03-19T11:25:17.574+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-19T11:25:17.611+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

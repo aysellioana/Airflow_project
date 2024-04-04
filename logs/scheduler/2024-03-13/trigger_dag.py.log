@@ -1,0 +1,235 @@
+[2024-03-13T11:09:05.510+0200] {processor.py:161} INFO - Started process (PID=1817) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:05.511+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:09:05.512+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.511+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:05.523+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:05.777+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.776+0200] {override.py:1769} INFO - Created Permission View: can delete on DAG:trigger_dag
+[2024-03-13T11:09:05.785+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.785+0200] {override.py:1769} INFO - Created Permission View: can edit on DAG:trigger_dag
+[2024-03-13T11:09:05.790+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.790+0200] {override.py:1769} INFO - Created Permission View: can read on DAG:trigger_dag
+[2024-03-13T11:09:05.790+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.790+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:09:05.800+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.800+0200] {dag.py:3069} INFO - Creating ORM DAG for trigger_dag
+[2024-03-13T11:09:05.801+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:05.801+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:09:05.813+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.304 seconds
+[2024-03-13T11:09:56.727+0200] {processor.py:161} INFO - Started process (PID=2006) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:56.728+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:09:56.728+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:56.728+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:56.740+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:09:56.889+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:56.889+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:09:56.901+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:09:56.901+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:09:56.915+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.190 seconds
+[2024-03-13T11:10:33.443+0200] {processor.py:161} INFO - Started process (PID=2140) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:10:33.444+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:10:33.445+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:10:33.445+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:10:33.458+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:10:33.607+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:10:33.607+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:10:33.621+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:10:33.620+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:10:33.638+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.197 seconds
+[2024-03-13T11:11:10.971+0200] {processor.py:161} INFO - Started process (PID=2275) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:10.972+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:11:10.972+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:10.972+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:10.985+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:11.146+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:11.145+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:11:11.159+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:11.158+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:11:11.191+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.221 seconds
+[2024-03-13T11:11:46.797+0200] {processor.py:161} INFO - Started process (PID=2423) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:46.798+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:11:46.799+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:46.799+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:46.811+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:11:46.955+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:46.955+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:11:46.967+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:11:46.966+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:11:46.982+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.186 seconds
+[2024-03-13T11:12:36.647+0200] {processor.py:161} INFO - Started process (PID=2607) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:12:36.648+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:12:36.649+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:12:36.649+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:12:36.664+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:12:36.841+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:12:36.840+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:12:36.854+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:12:36.853+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:12:36.876+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.231 seconds
+[2024-03-13T11:16:49.757+0200] {processor.py:161} INFO - Started process (PID=2995) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:16:49.757+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:16:49.758+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:16:49.758+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:16:49.769+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:16:49.913+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:16:49.913+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:16:49.925+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:16:49.925+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:16:49.942+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.187 seconds
+[2024-03-13T11:17:54.058+0200] {processor.py:161} INFO - Started process (PID=3247) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:17:54.059+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:17:54.059+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:17:54.059+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:17:54.070+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:17:54.213+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:17:54.213+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:17:54.224+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:17:54.224+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:17:54.239+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.183 seconds
+[2024-03-13T11:18:43.092+0200] {processor.py:161} INFO - Started process (PID=3456) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:18:43.093+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:18:43.093+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:18:43.093+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:18:43.104+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:18:43.242+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:18:43.242+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:18:43.260+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:18:43.260+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:18:43.277+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.187 seconds
+[2024-03-13T11:19:18.354+0200] {processor.py:161} INFO - Started process (PID=3577) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:18.355+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:19:18.356+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:18.356+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:18.370+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:18.526+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:18.525+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:19:18.536+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:18.536+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:19:18.551+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.199 seconds
+[2024-03-13T11:19:55.499+0200] {processor.py:161} INFO - Started process (PID=3729) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:55.500+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:19:55.500+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:55.500+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:55.514+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:19:55.662+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:55.662+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:19:55.678+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:19:55.677+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:19:55.693+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.196 seconds
+[2024-03-13T11:20:34.981+0200] {processor.py:161} INFO - Started process (PID=3887) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:20:34.982+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:20:34.983+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:20:34.982+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:20:34.997+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:20:35.195+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:20:35.194+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:20:35.207+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:20:35.207+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:20:35.242+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.263 seconds
+[2024-03-13T11:21:11.565+0200] {processor.py:161} INFO - Started process (PID=4031) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:11.566+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:21:11.567+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:11.567+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:11.581+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:11.744+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:11.744+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:21:11.757+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:11.757+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:21:11.793+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.229 seconds
+[2024-03-13T11:21:45.509+0200] {processor.py:161} INFO - Started process (PID=4172) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:45.510+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:21:45.511+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:45.511+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:45.522+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:21:45.670+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:45.669+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:21:45.690+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:21:45.690+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:21:45.704+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.196 seconds
+[2024-03-13T11:22:32.267+0200] {processor.py:161} INFO - Started process (PID=4352) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:22:32.268+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:22:32.268+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:22:32.268+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:22:32.281+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:22:32.438+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:22:32.438+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:22:32.448+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:22:32.448+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:22:32.462+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.197 seconds
+[2024-03-13T11:23:10.980+0200] {processor.py:161} INFO - Started process (PID=4485) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:10.981+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:23:10.982+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:10.982+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:10.995+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:11.170+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:11.170+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:23:11.191+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:11.190+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:23:11.209+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.230 seconds
+[2024-03-13T11:23:48.300+0200] {processor.py:161} INFO - Started process (PID=4622) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:48.301+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:23:48.302+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:48.302+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:48.317+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:23:48.509+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:48.508+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:23:48.522+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:23:48.522+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:23:48.552+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.254 seconds
+[2024-03-13T11:24:27.427+0200] {processor.py:161} INFO - Started process (PID=4766) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:24:27.428+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:24:27.429+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:24:27.428+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:24:27.441+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:24:27.612+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:24:27.612+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:24:27.644+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:24:27.644+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:24:27.663+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.237 seconds
+[2024-03-13T11:25:07.231+0200] {processor.py:161} INFO - Started process (PID=4906) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:07.232+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:25:07.232+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:07.232+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:07.244+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:07.438+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:07.437+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:25:07.450+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:07.450+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:25:07.467+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.238 seconds
+[2024-03-13T11:25:42.373+0200] {processor.py:161} INFO - Started process (PID=5033) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:42.374+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:25:42.375+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:42.374+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:42.385+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:25:42.537+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:42.537+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:25:42.547+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:25:42.547+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:25:42.561+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.189 seconds
+[2024-03-13T11:26:25.442+0200] {processor.py:161} INFO - Started process (PID=5204) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:26:25.442+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:26:25.443+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:26:25.443+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:26:25.455+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:26:25.638+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:26:25.638+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:26:25.650+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:26:25.650+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:26:25.667+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.227 seconds
+[2024-03-13T11:27:05.408+0200] {processor.py:161} INFO - Started process (PID=5361) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:05.409+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:27:05.409+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:05.409+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:05.420+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:05.569+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:05.569+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:27:05.592+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:05.592+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:27:05.607+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.201 seconds
+[2024-03-13T11:27:46.738+0200] {processor.py:161} INFO - Started process (PID=5515) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:46.739+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:27:46.740+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:46.740+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:46.754+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:27:46.943+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:46.942+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:27:46.955+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:27:46.955+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:27:46.990+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.253 seconds
+[2024-03-13T11:28:30.699+0200] {processor.py:161} INFO - Started process (PID=5693) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:28:30.700+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:28:30.701+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:28:30.700+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:28:30.711+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:28:30.863+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:28:30.863+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:28:30.890+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:28:30.889+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:28:30.904+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.206 seconds
+[2024-03-13T11:29:10.958+0200] {processor.py:161} INFO - Started process (PID=5853) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:10.959+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:29:10.960+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:10.960+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:10.971+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:11.110+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:11.110+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:29:11.121+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:11.120+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:29:11.148+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.192 seconds
+[2024-03-13T11:29:51.476+0200] {processor.py:161} INFO - Started process (PID=6005) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:51.477+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:29:51.478+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:51.478+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:51.488+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:29:51.642+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:51.642+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:29:51.653+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:29:51.653+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:29:51.682+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.207 seconds
+[2024-03-13T11:30:33.955+0200] {processor.py:161} INFO - Started process (PID=6176) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:30:33.956+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:30:33.956+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:30:33.956+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:30:33.967+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:30:34.119+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:30:34.119+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:30:34.130+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:30:34.130+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:30:34.144+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.190 seconds
+[2024-03-13T11:31:14.718+0200] {processor.py:161} INFO - Started process (PID=6336) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:14.719+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:31:14.720+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:14.719+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:14.730+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:14.872+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:14.871+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:31:14.882+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:14.882+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:31:14.896+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.180 seconds
+[2024-03-13T11:31:57.173+0200] {processor.py:161} INFO - Started process (PID=6505) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:57.174+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:31:57.175+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:57.175+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:57.190+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:31:57.369+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:57.369+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:31:57.379+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:31:57.379+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:31:57.393+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.222 seconds
+[2024-03-13T11:32:39.897+0200] {processor.py:161} INFO - Started process (PID=6677) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:32:39.898+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:32:39.899+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:32:39.899+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:32:39.909+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:32:40.069+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:32:40.068+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:32:40.079+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:32:40.079+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:32:40.093+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.197 seconds
+[2024-03-13T11:33:22.633+0200] {processor.py:161} INFO - Started process (PID=6866) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:33:22.634+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:33:22.635+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:33:22.635+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:33:22.650+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:33:22.827+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:33:22.827+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:33:22.838+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:33:22.838+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:33:22.869+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.237 seconds
+[2024-03-13T11:34:05.364+0200] {processor.py:161} INFO - Started process (PID=7030) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:05.364+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:34:05.365+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:05.365+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:05.376+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:05.538+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:05.538+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:34:05.548+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:05.548+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:34:05.578+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.215 seconds
+[2024-03-13T11:34:45.693+0200] {processor.py:161} INFO - Started process (PID=7188) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:45.694+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-13T11:34:45.694+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:45.694+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:45.706+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-13T11:34:45.869+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:45.869+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-13T11:34:45.883+0200] {logging_mixin.py:188} INFO - [2024-03-13T11:34:45.883+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-13T11:34:45.898+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.207 seconds

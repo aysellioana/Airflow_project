@@ -1,0 +1,86 @@
+[2024-04-04T13:12:21.331+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:12:07.693376+00:00 [queued]>
+[2024-04-04T13:12:21.340+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:12:07.693376+00:00 [queued]>
+[2024-04-04T13:12:21.340+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T13:12:21.354+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-04-04 10:12:07.693376+00:00
+[2024-04-04T13:12:21.358+0300] {standard_task_runner.py:60} INFO - Started process 60368 to run task
+[2024-04-04T13:12:21.365+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-04-04T10:12:07.693376+00:00', '--job-id', '1847', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmplreav2ue']
+[2024-04-04T13:12:21.367+0300] {standard_task_runner.py:88} INFO - Job 1847: Subtask process_result.sensor_triggered_dag
+[2024-04-04T13:12:21.489+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:12:07.693376+00:00 [running]> on host C9843
+[2024-04-04T13:12:21.649+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T10:12:07.693376+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T10:12:07.693376+00:00'
+[2024-04-04T13:12:21.652+0300] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-04-04T10:17:21.652567 ... 
+[2024-04-04T13:12:21.662+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 1121, in _init_compiled
+    param = {
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 1122, in <dictcomp>
+    key: processors[key](compiled_params[key])
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/sql/type_api.py", line 1671, in process
+    return process_param(value, dialect)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py", line 73, in process_bind_param
+    raise ValueError("naive datetime is disallowed")
+ValueError: naive datetime is disallowed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 328, in poke
+    count_allowed = self.get_count(dttm_filter, session, self.allowed_states)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 420, in get_count
+    count = self._count_query(DR, session, states, dttm_filter).scalar()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1816, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 1121, in _init_compiled
+    param = {
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 1122, in <dictcomp>
+    key: processors[key](compiled_params[key])
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/sql/type_api.py", line 1671, in process
+    return process_param(value, dialect)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py", line 73, in process_bind_param
+    raise ValueError("naive datetime is disallowed")
+sqlalchemy.exc.StatementError: (builtins.ValueError) naive datetime is disallowed
+[SQL: SELECT count(*) AS count_1 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.state IN (__[POSTCOMPILE_state_1]) AND dag_run.execution_date IN (__[POSTCOMPILE_execution_date_1])]
+[parameters: [{}]]
+[2024-04-04T13:12:21.689+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240404T101207, start_date=20240404T101221, end_date=20240404T101221
+[2024-04-04T13:12:21.704+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1847 for task process_result.sensor_triggered_dag ((builtins.ValueError) naive datetime is disallowed
+[SQL: SELECT count(*) AS count_1 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.state IN (__[POSTCOMPILE_state_1]) AND dag_run.execution_date IN (__[POSTCOMPILE_execution_date_1])]
+[parameters: [{}]]; 60368)
+[2024-04-04T13:12:21.711+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-04T13:12:21.779+0300] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,17 @@
+[2024-03-27T15:54:56.359+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.query_table_task manual__2024-03-27T13:29:02.834030+00:00 [queued]>
+[2024-03-27T15:54:56.390+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.query_table_task manual__2024-03-27T13:29:02.834030+00:00 [queued]>
+[2024-03-27T15:54:56.390+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-27T15:54:56.426+0200] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): query_table_task> on 2024-03-27 13:29:02.834030+00:00
+[2024-03-27T15:54:56.434+0200] {standard_task_runner.py:60} INFO - Started process 63130 to run task
+[2024-03-27T15:54:56.443+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'query_table_task', 'manual__2024-03-27T13:29:02.834030+00:00', '--job-id', '870', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp3e401mk2']
+[2024-03-27T15:54:56.446+0200] {standard_task_runner.py:88} INFO - Job 870: Subtask query_table_task
+[2024-03-27T15:54:56.595+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.query_table_task manual__2024-03-27T13:29:02.834030+00:00 [running]> on host C9843
+[2024-03-27T15:54:56.837+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='query_table_task' AIRFLOW_CTX_EXECUTION_DATE='2024-03-27T13:29:02.834030+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-27T13:29:02.834030+00:00'
+[2024-03-27T15:54:56.880+0200] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-03-27T15:54:56.899+0200] {sql.py:457} INFO - Running statement: SELECT COUNT(*) FROM table_name_3, parameters: None
+[2024-03-27T15:54:56.902+0200] {sql.py:466} INFO - Rows affected: 1
+[2024-03-27T15:54:56.916+0200] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2024-03-27T15:54:56.924+0200] {python.py:202} INFO - Done. Returned value was: 3
+[2024-03-27T15:54:56.989+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_id_3, task_id=query_table_task, execution_date=20240327T132902, start_date=20240327T135456, end_date=20240327T135456
+[2024-03-27T15:54:57.046+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-27T15:54:57.101+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

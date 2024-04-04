@@ -1,0 +1,17 @@
+[2024-03-18T10:26:01.765+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.whoami_task manual__2024-03-18T08:23:59.824706+00:00 [queued]>
+[2024-03-18T10:26:01.772+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.whoami_task manual__2024-03-18T08:23:59.824706+00:00 [queued]>
+[2024-03-18T10:26:01.772+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-18T10:26:01.782+0200] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): whoami_task> on 2024-03-18 08:23:59.824706+00:00
+[2024-03-18T10:26:01.786+0200] {standard_task_runner.py:60} INFO - Started process 12732 to run task
+[2024-03-18T10:26:01.792+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'whoami_task', 'manual__2024-03-18T08:23:59.824706+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpjj1akzbn']
+[2024-03-18T10:26:01.795+0200] {standard_task_runner.py:88} INFO - Job 260: Subtask whoami_task
+[2024-03-18T10:26:01.886+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.whoami_task manual__2024-03-18T08:23:59.824706+00:00 [running]> on host C9843
+[2024-03-18T10:26:02.028+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='whoami_task' AIRFLOW_CTX_EXECUTION_DATE='2024-03-18T08:23:59.824706+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-18T08:23:59.824706+00:00'
+[2024-03-18T10:26:02.031+0200] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T
+[2024-03-18T10:26:02.032+0200] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'whoami']
+[2024-03-18T10:26:02.039+0200] {subprocess.py:86} INFO - Output:
+[2024-03-18T10:26:02.049+0200] {subprocess.py:93} INFO - abatcoveanu
+[2024-03-18T10:26:02.050+0200] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-03-18T10:26:02.095+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_id_3, task_id=whoami_task, execution_date=20240318T082359, start_date=20240318T082601, end_date=20240318T082602
+[2024-03-18T10:26:02.137+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-18T10:26:02.180+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

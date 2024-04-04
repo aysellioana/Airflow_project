@@ -1,0 +1,32 @@
+[2024-04-03T16:18:55.180+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T13:17:41.864662+00:00 [queued]>
+[2024-04-03T16:18:55.190+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T13:17:41.864662+00:00 [queued]>
+[2024-04-03T16:18:55.190+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-03T16:18:55.205+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-04-03 13:17:41.864662+00:00
+[2024-04-03T16:18:55.210+0300] {standard_task_runner.py:60} INFO - Started process 9254 to run task
+[2024-04-03T16:18:55.218+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-04-03T13:17:41.864662+00:00', '--job-id', '1299', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpk3b1sqmz']
+[2024-04-03T16:18:55.221+0300] {standard_task_runner.py:88} INFO - Job 1299: Subtask process_result.sensor_triggered_dag
+[2024-04-03T16:18:55.302+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-03T13:17:41.864662+00:00 [running]> on host C9843
+[2024-04-03T16:18:55.430+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T13:17:41.864662+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T13:17:41.864662+00:00'
+[2024-04-03T16:18:55.433+0300] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-04-03T13:17:41.864662+00:00 ... 
+[2024-04-03T16:19:55.447+0300] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-04-03T13:17:41.864662+00:00 ... 
+[2024-04-03T16:20:55.456+0300] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-04-03T13:17:41.864662+00:00 ... 
+[2024-04-03T16:21:46.852+0300] {local_task_job_runner.py:280} WARNING - Recorded pid 10461 does not match the current pid 9254
+[2024-04-03T16:21:46.862+0300] {process_utils.py:131} INFO - Sending 15 to group 9254. PIDs of all processes in the group: [9254]
+[2024-04-03T16:21:46.862+0300] {process_utils.py:86} INFO - Sending the signal 15 to group 9254
+[2024-04-03T16:21:46.863+0300] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-03T16:21:46.879+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 293, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2482, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-03T16:21:46.884+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240403T131741, start_date=20240403T132144, end_date=20240403T132146
+[2024-04-03T16:21:46.903+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1299 for task process_result.sensor_triggered_dag (Task received SIGTERM signal; 9254)
+[2024-04-03T16:21:46.921+0300] {process_utils.py:79} INFO - Process psutil.Process(pid=9254, status='terminated', exitcode=1, started='16:18:55') (9254) terminated with exit code 1

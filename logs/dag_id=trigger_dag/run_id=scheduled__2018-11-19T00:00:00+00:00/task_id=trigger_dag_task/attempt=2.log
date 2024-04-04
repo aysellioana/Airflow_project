@@ -1,0 +1,4 @@
+[2024-04-03T17:31:12.465+0300] {taskinstance.py:1969} INFO - Dependencies not met for <TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-19T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2024-04-03T17:31:12.467+0300] {local_task_job_runner.py:160} INFO - Task is not able to be run
+[2024-04-03T17:31:23.864+0300] {taskinstance.py:1969} INFO - Dependencies not met for <TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-19T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2024-04-03T17:31:23.866+0300] {local_task_job_runner.py:160} INFO - Task is not able to be run

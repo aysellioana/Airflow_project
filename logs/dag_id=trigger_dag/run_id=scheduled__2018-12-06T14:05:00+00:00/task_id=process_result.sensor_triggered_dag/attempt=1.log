@@ -1,0 +1,46 @@
+[2024-04-04T14:04:59.554+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag scheduled__2018-12-06T14:05:00+00:00 [queued]>
+[2024-04-04T14:04:59.580+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag scheduled__2018-12-06T14:05:00+00:00 [queued]>
+[2024-04-04T14:04:59.580+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T14:04:59.651+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2018-12-06 14:05:00+00:00
+[2024-04-04T14:04:59.658+0300] {standard_task_runner.py:60} INFO - Started process 81273 to run task
+[2024-04-04T14:04:59.670+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'scheduled__2018-12-06T14:05:00+00:00', '--job-id', '1964', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpffi970j4']
+[2024-04-04T14:04:59.673+0300] {standard_task_runner.py:88} INFO - Job 1964: Subtask process_result.sensor_triggered_dag
+[2024-04-04T14:04:59.863+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag scheduled__2018-12-06T14:05:00+00:00 [running]> on host C9843
+[2024-04-04T14:05:00.130+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2018-12-06T14:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2018-12-06T14:05:00+00:00'
+[2024-04-04T14:05:00.167+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 240, in poke
+    dttm_filter = self._get_dttm_filter(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 229, in _get_dttm_filter
+    dttm = self._handle_execution_date_fn(context=context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 468, in _handle_execution_date_fn
+    return kwargs_callable(logical_date, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/operator_helpers.py", line 212, in kwargs_func
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/abatcoveanu/airflow/dags/trigger_dag.py", line 31, in execution_date_fn
+    external_cron_iterator = croniter(external_dag_schedule_interval, current_run_time)
+  File "/usr/local/lib/python3.8/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+  File "/usr/local/lib/python3.8/site-packages/croniter/croniter.py", line 811, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+  File "/usr/local/lib/python3.8/site-packages/croniter/croniter.py", line 647, in _expand
+    efl = expr_format.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+[2024-04-04T14:05:00.205+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20181206T140500, start_date=20240404T110459, end_date=20240404T110500
+[2024-04-04T14:05:00.251+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1964 for task process_result.sensor_triggered_dag ('NoneType' object has no attribute 'lower'; 81273)
+[2024-04-04T14:05:00.265+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-04T14:05:00.354+0300] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

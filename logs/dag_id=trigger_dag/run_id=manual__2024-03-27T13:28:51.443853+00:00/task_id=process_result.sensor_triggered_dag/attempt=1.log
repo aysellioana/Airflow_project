@@ -1,0 +1,76 @@
+[2024-03-27T15:29:07.392+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-27T13:28:51.443853+00:00 [queued]>
+[2024-03-27T15:29:07.429+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-27T13:28:51.443853+00:00 [queued]>
+[2024-03-27T15:29:07.430+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-27T15:29:07.471+0200] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-03-27 13:28:51.443853+00:00
+[2024-03-27T15:29:07.477+0200] {standard_task_runner.py:60} INFO - Started process 46083 to run task
+[2024-03-27T15:29:07.487+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-03-27T13:28:51.443853+00:00', '--job-id', '665', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpphi219qv']
+[2024-03-27T15:29:07.490+0200] {standard_task_runner.py:88} INFO - Job 665: Subtask process_result.sensor_triggered_dag
+[2024-03-27T15:29:07.641+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-27T13:28:51.443853+00:00 [running]> on host C9843
+[2024-03-27T15:29:07.920+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-03-27T13:28:51.443853+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-27T13:28:51.443853+00:00'
+[2024-03-27T15:29:07.923+0200] {external_task.py:260} INFO - Poking for DAG '{'schedule': None, 'start_date': datetime.datetime(2018, 11, 11, 0, 0), 'table_name': 'table_name_3'}' on 2024-03-27T13:28:51.443853+00:00 ... 
+[2024-03-27T15:29:07.936+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: can't adapt type 'dict'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 328, in poke
+    count_allowed = self.get_count(dttm_filter, session, self.allowed_states)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 420, in get_count
+    count = self._count_query(DR, session, states, dttm_filter).scalar()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'dict'
+[SQL: SELECT count(*) AS count_1 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.state IN (%(state_1_1)s) AND dag_run.execution_date IN (%(execution_date_1_1)s)]
+[parameters: {'dag_id_1': {'schedule': None, 'start_date': datetime.datetime(2018, 11, 11, 0, 0), 'table_name': 'table_name_3'}, 'state_1_1': 'success', 'execution_date_1_1': DateTime(2024, 3, 27, 13, 28, 51, 443853, tzinfo=Timezone('UTC'))}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2024-03-27T15:29:07.979+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240327T132851, start_date=20240327T132907, end_date=20240327T132907
+[2024-03-27T15:29:08.020+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 665 for task process_result.sensor_triggered_dag ((psycopg2.ProgrammingError) can't adapt type 'dict'
+[SQL: SELECT count(*) AS count_1 
+FROM dag_run 
+WHERE dag_run.dag_id = %(dag_id_1)s AND dag_run.state IN (%(state_1_1)s) AND dag_run.execution_date IN (%(execution_date_1_1)s)]
+[parameters: {'dag_id_1': {'schedule': None, 'start_date': datetime.datetime(2018, 11, 11, 0, 0), 'table_name': 'table_name_3'}, 'state_1_1': 'success', 'execution_date_1_1': DateTime(2024, 3, 27, 13, 28, 51, 443853, tzinfo=Timezone('UTC'))}]
+(Background on this error at: https://sqlalche.me/e/14/f405); 46083)
+[2024-03-27T15:29:08.043+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-27T15:29:08.125+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

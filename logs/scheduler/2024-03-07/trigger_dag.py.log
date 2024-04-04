@@ -1,0 +1,11 @@
+[2024-03-07T14:14:20.994+0200] {processor.py:161} INFO - Started process (PID=40324) to work on /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-07T14:14:20.994+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/trigger_dag.py for tasks to queue
+[2024-03-07T14:14:20.995+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:20.995+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-07T14:14:21.007+0200] {processor.py:840} INFO - DAG(s) 'trigger_dag' retrieved from /Users/abatcoveanu/airflow/dags/trigger_dag.py
+[2024-03-07T14:14:21.268+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.268+0200] {override.py:1769} INFO - Created Permission View: can edit on DAG:trigger_dag
+[2024-03-07T14:14:21.277+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.276+0200] {override.py:1769} INFO - Created Permission View: can read on DAG:trigger_dag
+[2024-03-07T14:14:21.282+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.282+0200] {override.py:1769} INFO - Created Permission View: can delete on DAG:trigger_dag
+[2024-03-07T14:14:21.282+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.282+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T14:14:21.291+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.291+0200] {dag.py:3069} INFO - Creating ORM DAG for trigger_dag
+[2024-03-07T14:14:21.292+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:21.291+0200] {dag.py:3834} INFO - Setting next_dagrun for trigger_dag to None, run_after=None
+[2024-03-07T14:14:21.306+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/trigger_dag.py took 0.314 seconds

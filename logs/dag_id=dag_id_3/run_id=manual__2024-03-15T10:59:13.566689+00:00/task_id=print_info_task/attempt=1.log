@@ -1,0 +1,15 @@
+[2024-03-15T12:59:16.666+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.print_info_task manual__2024-03-15T10:59:13.566689+00:00 [queued]>
+[2024-03-15T12:59:16.673+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.print_info_task manual__2024-03-15T10:59:13.566689+00:00 [queued]>
+[2024-03-15T12:59:16.673+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-15T12:59:16.684+0200] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): print_info_task> on 2024-03-15 10:59:13.566689+00:00
+[2024-03-15T12:59:16.688+0200] {standard_task_runner.py:60} INFO - Started process 46778 to run task
+[2024-03-15T12:59:16.694+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'print_info_task', 'manual__2024-03-15T10:59:13.566689+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpj4vl8b8v']
+[2024-03-15T12:59:16.696+0200] {standard_task_runner.py:88} INFO - Job 84: Subtask print_info_task
+[2024-03-15T12:59:16.783+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.print_info_task manual__2024-03-15T10:59:13.566689+00:00 [running]> on host C9843
+[2024-03-15T12:59:16.923+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='print_info_task' AIRFLOW_CTX_EXECUTION_DATE='2024-03-15T10:59:13.566689+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-15T10:59:13.566689+00:00'
+[2024-03-15T12:59:16.925+0200] {logging_mixin.py:188} INFO - dag_id_3 start processing tables in database table_name_3
+[2024-03-15T12:59:16.926+0200] {python.py:202} INFO - Done. Returned value was: None
+[2024-03-15T12:59:16.938+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_id_3, task_id=print_info_task, execution_date=20240315T105913, start_date=20240315T105916, end_date=20240315T105916
+[2024-03-15T12:59:16.951+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-15T12:59:16.983+0200] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/baseoperator.py:1201 AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+[2024-03-15T12:59:17.019+0200] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

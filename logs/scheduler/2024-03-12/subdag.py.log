@@ -1,0 +1,157 @@
+[2024-03-12T11:22:34.649+0200] {processor.py:161} INFO - Started process (PID=8048) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:22:34.650+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:22:34.651+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:22:34.650+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:22:34.683+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:22:34.681+0200] {dagbag.py:350} ERROR - Failed to import: /Users/abatcoveanu/airflow/dags/subdag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/abatcoveanu/airflow/dags/subdag.py", line 29, in <module>
+    with TaskGroup('taskSection') as process:
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/task_group.py", line 123, in __init__
+    raise AirflowException("TaskGroup can only be used inside a dag")
+airflow.exceptions.AirflowException: TaskGroup can only be used inside a dag
+[2024-03-12T11:22:34.683+0200] {processor.py:842} WARNING - No viable dags retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:22:34.770+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.122 seconds
+[2024-03-12T11:23:30.467+0200] {processor.py:161} INFO - Started process (PID=8103) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:23:30.468+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:23:30.469+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.468+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:23:30.501+0200] {processor.py:840} INFO - DAG(s) 'your_dag_id' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:23:30.756+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.754+0200] {override.py:1769} INFO - Created Permission View: can edit on DAG:your_dag_id
+[2024-03-12T11:23:30.766+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.766+0200] {override.py:1769} INFO - Created Permission View: can delete on DAG:your_dag_id
+[2024-03-12T11:23:30.775+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.774+0200] {override.py:1769} INFO - Created Permission View: can read on DAG:your_dag_id
+[2024-03-12T11:23:30.775+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.775+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:23:30.789+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.788+0200] {dag.py:3069} INFO - Creating ORM DAG for your_dag_id
+[2024-03-12T11:23:30.790+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:23:30.789+0200] {dag.py:3834} INFO - Setting next_dagrun for your_dag_id to None, run_after=None
+[2024-03-12T11:23:30.818+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.353 seconds
+[2024-03-12T11:25:23.221+0200] {processor.py:161} INFO - Started process (PID=8235) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:25:23.222+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:25:23.223+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:25:23.223+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:25:23.255+0200] {processor.py:840} INFO - DAG(s) 'your_dag_id' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:25:23.485+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:25:23.485+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:25:23.495+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:25:23.494+0200] {dag.py:3834} INFO - Setting next_dagrun for your_dag_id to None, run_after=None
+[2024-03-12T11:25:23.513+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.293 seconds
+[2024-03-12T11:27:26.202+0200] {processor.py:161} INFO - Started process (PID=8574) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:27:26.204+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:27:26.205+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:27:26.205+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:27:26.238+0200] {processor.py:840} INFO - DAG(s) 'your_dag_id' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:27:26.390+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:27:26.390+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:27:26.402+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:27:26.402+0200] {dag.py:3834} INFO - Setting next_dagrun for your_dag_id to None, run_after=None
+[2024-03-12T11:27:26.419+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.218 seconds
+[2024-03-12T11:29:20.566+0200] {processor.py:161} INFO - Started process (PID=8752) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:29:20.567+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:29:20.568+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:29:20.568+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:29:20.603+0200] {processor.py:840} INFO - DAG(s) 'your_dag_id' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:29:20.828+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:29:20.828+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:29:20.835+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:29:20.835+0200] {dag.py:3834} INFO - Setting next_dagrun for your_dag_id to None, run_after=None
+[2024-03-12T11:29:20.851+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.286 seconds
+[2024-03-12T11:31:12.393+0200] {processor.py:161} INFO - Started process (PID=8887) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:31:12.395+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:31:12.395+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.395+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:31:12.426+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:31:12.626+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.626+0200] {override.py:1769} INFO - Created Permission View: can edit on DAG:dagTaskGroup
+[2024-03-12T11:31:12.634+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.634+0200] {override.py:1769} INFO - Created Permission View: can delete on DAG:dagTaskGroup
+[2024-03-12T11:31:12.639+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.639+0200] {override.py:1769} INFO - Created Permission View: can read on DAG:dagTaskGroup
+[2024-03-12T11:31:12.639+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.639+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:31:12.650+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.650+0200] {dag.py:3069} INFO - Creating ORM DAG for dagTaskGroup
+[2024-03-12T11:31:12.650+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:31:12.650+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:31:12.665+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.273 seconds
+[2024-03-12T11:33:08.851+0200] {processor.py:161} INFO - Started process (PID=9016) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:33:08.853+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:33:08.854+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:33:08.853+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:33:08.886+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:33:08.896+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:33:08.896+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:33:09.022+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:33:09.022+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:33:09.040+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.190 seconds
+[2024-03-12T11:35:04.113+0200] {processor.py:161} INFO - Started process (PID=9153) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:35:04.115+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:35:04.116+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:35:04.115+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:35:04.153+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:35:04.414+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:35:04.414+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:35:04.423+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:35:04.423+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:35:04.444+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.332 seconds
+[2024-03-12T11:37:05.244+0200] {processor.py:161} INFO - Started process (PID=9314) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:37:05.246+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:37:05.247+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:37:05.247+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:37:05.280+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:37:05.422+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:37:05.422+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:37:05.432+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:37:05.432+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:37:05.450+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.207 seconds
+[2024-03-12T11:38:51.348+0200] {processor.py:161} INFO - Started process (PID=9443) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:38:51.349+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:38:51.350+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:38:51.350+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:38:51.379+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:38:51.502+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:38:51.501+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:38:51.511+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:38:51.511+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:38:51.526+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.180 seconds
+[2024-03-12T11:40:25.437+0200] {processor.py:161} INFO - Started process (PID=9552) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:40:25.438+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:40:25.439+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:40:25.438+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:40:25.464+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:40:25.585+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:40:25.585+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:40:25.594+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:40:25.594+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:40:25.612+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.176 seconds
+[2024-03-12T11:41:59.174+0200] {processor.py:161} INFO - Started process (PID=9650) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:41:59.175+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:41:59.175+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:41:59.175+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:41:59.199+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:41:59.321+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:41:59.321+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:41:59.330+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:41:59.330+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:41:59.346+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.174 seconds
+[2024-03-12T11:43:31.947+0200] {processor.py:161} INFO - Started process (PID=9772) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:43:31.948+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:43:31.949+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:43:31.949+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:43:31.975+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:43:32.097+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:43:32.097+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:43:32.105+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:43:32.105+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:43:32.123+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.177 seconds
+[2024-03-12T11:45:06.582+0200] {processor.py:161} INFO - Started process (PID=9876) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:45:06.583+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:45:06.583+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:45:06.583+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:45:06.606+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:45:06.727+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:45:06.727+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:45:06.737+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:45:06.736+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:45:06.753+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.172 seconds
+[2024-03-12T11:46:46.489+0200] {processor.py:161} INFO - Started process (PID=9996) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:46:46.490+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T11:46:46.491+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:46:46.491+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:46:46.521+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T11:46:46.646+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:46:46.646+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T11:46:46.656+0200] {logging_mixin.py:188} INFO - [2024-03-12T11:46:46.656+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T11:46:46.675+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.187 seconds
+[2024-03-12T12:18:34.873+0200] {processor.py:161} INFO - Started process (PID=10168) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:18:34.879+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T12:18:34.881+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:18:34.881+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:18:35.003+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:18:35.500+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:18:35.500+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T12:18:35.534+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:18:35.533+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T12:18:35.593+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.726 seconds
+[2024-03-12T12:23:18.489+0200] {processor.py:161} INFO - Started process (PID=10336) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:23:18.490+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T12:23:18.490+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:23:18.490+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:23:18.514+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:23:18.635+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:23:18.635+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T12:23:18.644+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:23:18.644+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T12:23:18.660+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.173 seconds
+[2024-03-12T12:24:52.630+0200] {processor.py:161} INFO - Started process (PID=10437) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:24:52.631+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T12:24:52.631+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:24:52.631+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:24:52.656+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:24:52.779+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:24:52.779+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T12:24:52.788+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:24:52.788+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T12:24:52.803+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.175 seconds
+[2024-03-12T12:26:29.069+0200] {processor.py:161} INFO - Started process (PID=10541) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:26:29.070+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T12:26:29.070+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:26:29.070+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:26:29.095+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:26:29.217+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:26:29.216+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T12:26:29.226+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:26:29.225+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T12:26:29.241+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.174 seconds
+[2024-03-12T12:28:14.156+0200] {processor.py:161} INFO - Started process (PID=10675) to work on /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:28:14.157+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/subdag.py for tasks to queue
+[2024-03-12T12:28:14.157+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:28:14.157+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:28:14.181+0200] {processor.py:840} INFO - DAG(s) 'dagTaskGroup' retrieved from /Users/abatcoveanu/airflow/dags/subdag.py
+[2024-03-12T12:28:14.304+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:28:14.304+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-12T12:28:14.314+0200] {logging_mixin.py:188} INFO - [2024-03-12T12:28:14.314+0200] {dag.py:3834} INFO - Setting next_dagrun for dagTaskGroup to None, run_after=None
+[2024-03-12T12:28:14.332+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/subdag.py took 0.178 seconds

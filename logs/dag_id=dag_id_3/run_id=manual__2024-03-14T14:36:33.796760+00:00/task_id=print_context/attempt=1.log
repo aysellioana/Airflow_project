@@ -1,0 +1,24 @@
+[2024-03-14T16:36:44.630+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.print_context manual__2024-03-14T14:36:33.796760+00:00 [queued]>
+[2024-03-14T16:36:44.638+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.print_context manual__2024-03-14T14:36:33.796760+00:00 [queued]>
+[2024-03-14T16:36:44.638+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-14T16:36:44.650+0200] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): print_context> on 2024-03-14 14:36:33.796760+00:00
+[2024-03-14T16:36:44.654+0200] {standard_task_runner.py:60} INFO - Started process 15505 to run task
+[2024-03-14T16:36:44.660+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'print_context', 'manual__2024-03-14T14:36:33.796760+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp7xmj5b2c']
+[2024-03-14T16:36:44.663+0200] {standard_task_runner.py:88} INFO - Job 9: Subtask print_context
+[2024-03-14T16:36:44.785+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.print_context manual__2024-03-14T14:36:33.796760+00:00 [running]> on host C9843
+[2024-03-14T16:36:44.904+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='print_context' AIRFLOW_CTX_EXECUTION_DATE='2024-03-14T14:36:33.796760+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-14T14:36:33.796760+00:00'
+[2024-03-14T16:36:44.907+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: your_function_with_context() missing 1 required positional argument: 'kwargs'
+[2024-03-14T16:36:44.937+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dag_id_3, task_id=print_context, execution_date=20240314T143633, start_date=20240314T143644, end_date=20240314T143644
+[2024-03-14T16:36:44.953+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task print_context (your_function_with_context() missing 1 required positional argument: 'kwargs'; 15505)
+[2024-03-14T16:36:44.974+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-14T16:36:45.000+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,2 @@
+[2024-04-04T11:20:55.564+0300] {taskinstance.py:1969} INFO - Dependencies not met for <TaskInstance: dag_id_3.check_table_existence manual__2024-04-04T08:17:35.092106+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
+[2024-04-04T11:20:55.566+0300] {local_task_job_runner.py:160} INFO - Task is not able to be run

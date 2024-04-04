@@ -1,0 +1,15 @@
+[2024-03-27T13:00:51.592+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:29:30.274059+00:00 [queued]>
+[2024-03-27T13:00:51.606+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:29:30.274059+00:00 [queued]>
+[2024-03-27T13:00:51.607+0200] {taskinstance.py:2193} INFO - Starting attempt 2 of 1
+[2024-03-27T13:00:51.641+0200] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-03-26 13:29:30.274059+00:00
+[2024-03-27T13:00:51.647+0200] {standard_task_runner.py:60} INFO - Started process 11530 to run task
+[2024-03-27T13:00:51.656+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-03-26T13:29:30.274059+00:00', '--job-id', '636', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpp7thtkj1']
+[2024-03-27T13:00:51.660+0200] {standard_task_runner.py:88} INFO - Job 636: Subtask process_result.sensor_triggered_dag
+[2024-03-27T13:00:51.801+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:29:30.274059+00:00 [running]> on host C9843
+[2024-03-27T13:00:52.053+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-03-26T13:29:30.274059+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-26T13:29:30.274059+00:00'
+[2024-03-27T13:00:52.056+0200] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-03-26T13:24:30.274059+00:00 ... 
+[2024-03-27T13:01:01.803+0200] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-03-27T13:01:01.823+0200] {process_utils.py:131} INFO - Sending 15 to group 11530. PIDs of all processes in the group: [11530]
+[2024-03-27T13:01:01.823+0200] {process_utils.py:86} INFO - Sending the signal 15 to group 11530
+[2024-03-27T13:01:01.824+0200] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-03-27T13:01:01.880+0200] {process_utils.py:79} INFO - Process psutil.Process(pid=11530, status='terminated', exitcode=0, started='13:00:51') (11530) terminated with exit code 0

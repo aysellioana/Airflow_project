@@ -1,0 +1,144 @@
+[2024-03-20T11:49:30.247+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-19T13:45:22.937311+00:00 [queued]>
+[2024-03-20T11:49:30.277+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-19T13:45:22.937311+00:00 [queued]>
+[2024-03-20T11:49:30.277+0200] {taskinstance.py:2193} INFO - Starting attempt 2 of 1
+[2024-03-20T11:49:30.293+0200] {taskinstance.py:2214} INFO - Executing <Task(FileSensor): wait_run_file> on 2024-03-19 13:45:22.937311+00:00
+[2024-03-20T11:49:30.299+0200] {standard_task_runner.py:60} INFO - Started process 7220 to run task
+[2024-03-20T11:49:30.307+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_run_file', 'manual__2024-03-19T13:45:22.937311+00:00', '--job-id', '455', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpszx_ojv6']
+[2024-03-20T11:49:30.310+0200] {standard_task_runner.py:88} INFO - Job 455: Subtask wait_run_file
+[2024-03-20T11:49:30.430+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.wait_run_file manual__2024-03-19T13:45:22.937311+00:00 [running]> on host C9843
+[2024-03-20T11:49:30.681+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-03-19T13:45:22.937311+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-19T13:45:22.937311+00:00'
+[2024-03-20T11:49:30.694+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:49:30.695+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:49:40.721+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:49:40.722+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:49:50.730+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:49:50.731+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:00.739+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:00.740+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:10.751+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:10.752+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:20.776+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:20.776+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:30.786+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:30.787+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:40.795+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:40.796+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:50:50.822+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:50:50.822+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:00.833+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:00.834+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:10.843+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:10.844+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:20.849+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:20.850+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:30.868+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:30.869+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:40.875+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:40.876+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:51:50.883+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:51:50.884+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:00.908+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:00.910+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:10.923+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:10.924+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:20.934+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:20.935+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:30.959+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:30.960+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:40.969+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:40.970+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:52:50.983+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:52:50.984+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:01.009+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:01.010+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:11.018+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:11.019+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:21.029+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:21.030+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:31.057+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:31.058+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:41.066+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:41.066+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:53:51.075+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:53:51.076+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:01.085+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:01.085+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:11.109+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:11.110+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:21.117+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:21.118+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:31.129+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:31.130+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:41.155+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:41.156+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:54:51.164+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:54:51.166+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:01.176+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:01.177+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:11.203+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:11.204+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:21.213+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:21.214+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:31.226+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:31.227+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:41.257+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:41.258+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:55:51.265+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:55:51.266+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:01.275+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:01.276+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:11.285+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:11.286+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:21.308+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:21.309+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:31.319+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:31.320+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:41.328+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:41.329+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:56:51.357+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:56:51.358+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:01.367+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:01.368+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:11.378+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:11.379+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:21.406+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:21.407+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:31.416+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:31.417+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:41.425+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:41.441+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:57:51.456+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:57:51.456+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:01.469+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:01.470+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:11.479+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:11.480+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:21.507+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:21.508+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:31.519+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:31.520+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:41.529+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:41.530+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:58:51.557+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:58:51.558+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:59:01.567+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:59:01.568+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:59:11.580+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:59:11.581+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:59:21.605+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:59:21.605+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:59:31.613+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T11:59:31.614+0200] {filesystem.py:66} INFO - Poking for file /subdag.py
+[2024-03-20T11:59:31.615+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 282, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 600.952406924 seconds exceeds the specified timeout of 600.0.
+[2024-03-20T11:59:31.626+0200] {taskinstance.py:1149} INFO - Immediate failure requested. Marking task as FAILED. dag_id=trigger_dag, task_id=wait_run_file, execution_date=20240319T134522, start_date=20240320T094930, end_date=20240320T095931
+[2024-03-20T11:59:31.656+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 455 for task wait_run_file (Sensor has timed out; run duration of 600.952406924 seconds exceeds the specified timeout of 600.0.; 7220)
+[2024-03-20T11:59:31.691+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-20T11:59:31.715+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

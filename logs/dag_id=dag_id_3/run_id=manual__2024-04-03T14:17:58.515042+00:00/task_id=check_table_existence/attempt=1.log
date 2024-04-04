@@ -1,0 +1,24 @@
+[2024-04-03T17:32:40.038+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.check_table_existence manual__2024-04-03T14:17:58.515042+00:00 [queued]>
+[2024-04-03T17:32:40.070+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.check_table_existence manual__2024-04-03T14:17:58.515042+00:00 [queued]>
+[2024-04-03T17:32:40.070+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-03T17:32:40.091+0300] {taskinstance.py:2214} INFO - Executing <Task(BranchPythonOperator): check_table_existence> on 2024-04-03 14:17:58.515042+00:00
+[2024-04-03T17:32:40.097+0300] {standard_task_runner.py:60} INFO - Started process 41076 to run task
+[2024-04-03T17:32:40.105+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'check_table_existence', 'manual__2024-04-03T14:17:58.515042+00:00', '--job-id', '1529', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpr76o6so4']
+[2024-04-03T17:32:40.109+0300] {standard_task_runner.py:88} INFO - Job 1529: Subtask check_table_existence
+[2024-04-03T17:32:40.240+0300] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.check_table_existence manual__2024-04-03T14:17:58.515042+00:00 [running]> on host C9843
+[2024-04-03T17:32:40.520+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='check_table_existence' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T14:17:58.515042+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T14:17:58.515042+00:00'
+[2024-04-03T17:32:40.528+0300] {logging_mixin.py:188} INFO - asdddd
+[2024-04-03T17:32:40.569+0300] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-04-03T17:32:40.571+0300] {logging_mixin.py:188} INFO - postgresql://airflow_user:***@localhost:5432/airflow_db
+[2024-04-03T17:32:40.586+0300] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-04-03T17:32:40.614+0300] {sql.py:457} INFO - Running statement: SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'table_name_3'), parameters: None
+[2024-04-03T17:32:40.620+0300] {sql.py:466} INFO - Rows affected: 1
+[2024-04-03T17:32:40.631+0300] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py:407 AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+[2024-04-03T17:32:40.633+0300] {python.py:202} INFO - Done. Returned value was: create_table_task
+[2024-04-03T17:32:40.633+0300] {branch.py:35} INFO - Branch into create_table_task
+[2024-04-03T17:32:40.635+0300] {skipmixin.py:178} INFO - Following branch create_table_task
+[2024-04-03T17:32:40.685+0300] {skipmixin.py:244} INFO - Skipping tasks [('dummy_task', -1)]
+[2024-04-03T17:32:40.822+0300] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_id_3, task_id=check_table_existence, execution_date=20240403T141758, start_date=20240403T143240, end_date=20240403T143240
+[2024-04-03T17:32:40.874+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-03T17:32:40.904+0300] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/baseoperator.py:1201 AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+[2024-04-03T17:32:40.945+0300] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

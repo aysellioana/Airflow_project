@@ -1,0 +1,15 @@
+[2024-04-04T13:03:01.785+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:02:45.756032+00:00 [queued]>
+[2024-04-04T13:03:01.799+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:02:45.756032+00:00 [queued]>
+[2024-04-04T13:03:01.799+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T13:03:01.833+0300] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-04-04 10:02:45.756032+00:00
+[2024-04-04T13:03:01.838+0300] {standard_task_runner.py:60} INFO - Started process 56400 to run task
+[2024-04-04T13:03:01.846+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-04-04T10:02:45.756032+00:00', '--job-id', '1818', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmphw5q5875']
+[2024-04-04T13:03:01.850+0300] {standard_task_runner.py:88} INFO - Job 1818: Subtask process_result.sensor_triggered_dag
+[2024-04-04T13:03:01.957+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:02:45.756032+00:00 [running]> on host C9843
+[2024-04-04T13:03:02.146+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T10:02:45.756032+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T10:02:45.756032+00:00'
+[2024-04-04T13:03:02.181+0300] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-04-04T10:02:37.756032+00:00 ... 
+[2024-04-04T13:03:02.244+0300] {taskinstance.py:2688} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2024-04-04T13:03:02.276+0300] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T13:03:02.342+0300] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-04T13:03:28.833+0300] {taskinstance.py:1969} INFO - Dependencies not met for <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-04-04T10:02:45.756032+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
+[2024-04-04T13:03:28.841+0300] {local_task_job_runner.py:160} INFO - Task is not able to be run

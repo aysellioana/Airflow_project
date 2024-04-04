@@ -1,0 +1,7 @@
+[2024-03-07T14:14:28.732+0200] {processor.py:161} INFO - Started process (PID=40331) to work on /Users/abatcoveanu/airflow/dags/dag_folder/my_first_dag.py
+[2024-03-07T14:14:28.733+0200] {processor.py:830} INFO - Processing file /Users/abatcoveanu/airflow/dags/dag_folder/my_first_dag.py for tasks to queue
+[2024-03-07T14:14:28.733+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:28.733+0200] {dagbag.py:540} INFO - Filling up the DagBag from /Users/abatcoveanu/airflow/dags/dag_folder/my_first_dag.py
+[2024-03-07T14:14:28.754+0200] {processor.py:840} INFO - DAG(s) 'dag_id_1' retrieved from /Users/abatcoveanu/airflow/dags/dag_folder/my_first_dag.py
+[2024-03-07T14:14:28.954+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:28.954+0200] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-03-07T14:14:28.961+0200] {logging_mixin.py:188} INFO - [2024-03-07T14:14:28.961+0200] {dag.py:3834} INFO - Setting next_dagrun for dag_id_1 to None, run_after=None
+[2024-03-07T14:14:28.975+0200] {processor.py:183} INFO - Processing /Users/abatcoveanu/airflow/dags/dag_folder/my_first_dag.py took 0.245 seconds

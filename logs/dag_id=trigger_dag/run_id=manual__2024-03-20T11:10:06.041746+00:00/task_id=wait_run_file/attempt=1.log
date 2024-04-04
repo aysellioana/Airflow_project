@@ -1,0 +1,84 @@
+[2024-03-20T13:10:09.219+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-20T11:10:06.041746+00:00 [queued]>
+[2024-03-20T13:10:09.228+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-20T11:10:06.041746+00:00 [queued]>
+[2024-03-20T13:10:09.228+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-20T13:10:09.260+0200] {taskinstance.py:2214} INFO - Executing <Task(FileSensor): wait_run_file> on 2024-03-20 11:10:06.041746+00:00
+[2024-03-20T13:10:09.265+0200] {standard_task_runner.py:60} INFO - Started process 17500 to run task
+[2024-03-20T13:10:09.272+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_run_file', 'manual__2024-03-20T11:10:06.041746+00:00', '--job-id', '493', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp_u1ixyvs']
+[2024-03-20T13:10:09.275+0200] {standard_task_runner.py:88} INFO - Job 493: Subtask wait_run_file
+[2024-03-20T13:10:09.384+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.wait_run_file manual__2024-03-20T11:10:06.041746+00:00 [running]> on host C9843
+[2024-03-20T13:10:09.527+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-03-20T11:10:06.041746+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-20T11:10:06.041746+00:00'
+[2024-03-20T13:10:09.541+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:09.541+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:10:19.566+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:19.567+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:10:29.578+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:29.578+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:10:39.586+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:39.587+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:10:49.612+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:49.613+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:10:59.640+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:10:59.642+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:09.667+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:09.668+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:19.678+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:19.679+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:29.687+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:29.688+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:39.713+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:39.713+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:49.722+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:49.723+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:11:59.730+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:11:59.731+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:09.742+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:09.743+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:19.767+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:19.768+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:29.777+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:29.778+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:39.811+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:39.812+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:49.821+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:49.821+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:12:59.831+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:12:59.832+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:09.840+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:09.841+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:19.864+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:19.865+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:29.873+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:29.874+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:39.881+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:39.882+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:49.891+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:49.892+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:13:59.915+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:13:59.916+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:09.925+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:09.926+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:19.934+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:19.935+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:29.961+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:29.962+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:39.972+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:39.973+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:49.981+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:49.981+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:14:59.990+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:14:59.991+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:15:10.016+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-20T13:15:10.017+0200] {filesystem.py:66} INFO - Poking for file /jobs_dag.py.py
+[2024-03-20T13:15:10.017+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 282, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 300.488479422 seconds exceeds the specified timeout of 300.0.
+[2024-03-20T13:15:10.029+0200] {taskinstance.py:1149} INFO - Immediate failure requested. Marking task as FAILED. dag_id=trigger_dag, task_id=wait_run_file, execution_date=20240320T111006, start_date=20240320T111009, end_date=20240320T111510
+[2024-03-20T13:15:10.039+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 493 for task wait_run_file (Sensor has timed out; run duration of 300.488479422 seconds exceeds the specified timeout of 300.0.; 17500)
+[2024-03-20T13:15:10.052+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-20T13:15:10.076+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

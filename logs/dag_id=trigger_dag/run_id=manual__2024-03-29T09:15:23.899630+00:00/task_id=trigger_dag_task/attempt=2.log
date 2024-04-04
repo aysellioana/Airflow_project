@@ -1,0 +1,15 @@
+[2024-03-29T11:16:14.189+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task manual__2024-03-29T09:15:23.899630+00:00 [queued]>
+[2024-03-29T11:16:14.213+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task manual__2024-03-29T09:15:23.899630+00:00 [queued]>
+[2024-03-29T11:16:14.219+0200] {taskinstance.py:2193} INFO - Starting attempt 2 of 1
+[2024-03-29T11:16:14.245+0200] {taskinstance.py:2214} INFO - Executing <Task(TriggerDagRunOperator): trigger_dag_task> on 2024-03-29 09:15:23.899630+00:00
+[2024-03-29T11:16:14.251+0200] {standard_task_runner.py:60} INFO - Started process 28260 to run task
+[2024-03-29T11:16:14.261+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'trigger_dag_task', 'manual__2024-03-29T09:15:23.899630+00:00', '--job-id', '1184', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpwjkqk1ja']
+[2024-03-29T11:16:14.266+0200] {standard_task_runner.py:88} INFO - Job 1184: Subtask trigger_dag_task
+[2024-03-29T11:16:14.406+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.trigger_dag_task manual__2024-03-29T09:15:23.899630+00:00 [running]> on host C9843
+[2024-03-29T11:16:14.611+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='trigger_dag_task' AIRFLOW_CTX_EXECUTION_DATE='2024-03-29T09:15:23.899630+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-29T09:15:23.899630+00:00'
+[2024-03-29T11:16:14.805+0200] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-03-29 09:16:14.613821+00:00 to become allowed state ['success'] ...
+[2024-03-29T11:16:24.436+0200] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-03-29T11:16:24.452+0200] {process_utils.py:131} INFO - Sending 15 to group 28260. PIDs of all processes in the group: [28260]
+[2024-03-29T11:16:24.452+0200] {process_utils.py:86} INFO - Sending the signal 15 to group 28260
+[2024-03-29T11:16:24.453+0200] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-03-29T11:16:24.508+0200] {process_utils.py:79} INFO - Process psutil.Process(pid=28260, status='terminated', exitcode=0, started='11:16:14') (28260) terminated with exit code 0

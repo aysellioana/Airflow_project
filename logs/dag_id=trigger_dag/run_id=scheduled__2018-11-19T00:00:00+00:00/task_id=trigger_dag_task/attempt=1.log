@@ -1,0 +1,36 @@
+[2024-04-03T17:22:48.059+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-19T00:00:00+00:00 [queued]>
+[2024-04-03T17:22:48.068+0300] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-19T00:00:00+00:00 [queued]>
+[2024-04-03T17:22:48.068+0300] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-03T17:22:48.082+0300] {taskinstance.py:2214} INFO - Executing <Task(TriggerDagRunOperator): trigger_dag_task> on 2018-11-19 00:00:00+00:00
+[2024-04-03T17:22:48.086+0300] {standard_task_runner.py:60} INFO - Started process 36080 to run task
+[2024-04-03T17:22:48.093+0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'trigger_dag_task', 'scheduled__2018-11-19T00:00:00+00:00', '--job-id', '1479', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp175qou6r']
+[2024-04-03T17:22:48.095+0300] {standard_task_runner.py:88} INFO - Job 1479: Subtask trigger_dag_task
+[2024-04-03T17:22:48.210+0300] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.trigger_dag_task scheduled__2018-11-19T00:00:00+00:00 [running]> on host C9843
+[2024-04-03T17:22:48.409+0300] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='trigger_dag_task' AIRFLOW_CTX_EXECUTION_DATE='2018-11-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2018-11-19T00:00:00+00:00'
+[2024-04-03T17:22:48.658+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:23:48.673+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:24:48.702+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:25:48.720+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:26:48.742+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:27:48.768+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:28:48.779+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:29:48.790+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:30:48.818+0300] {trigger_dagrun.py:210} INFO - Waiting for dag_id_3 on 2024-04-03 14:22:48.412982+00:00 to become allowed state ['success'] ...
+[2024-04-03T17:31:03.244+0300] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2024-04-03T17:31:03.267+0300] {process_utils.py:131} INFO - Sending 15 to group 36080. PIDs of all processes in the group: [36080]
+[2024-04-03T17:31:03.268+0300] {process_utils.py:86} INFO - Sending the signal 15 to group 36080
+[2024-04-03T17:31:03.270+0300] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-03T17:31:03.297+0300] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/trigger_dagrun.py", line 216, in execute
+    time.sleep(self.poke_interval)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2482, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-03T17:31:03.317+0300] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=trigger_dag_task, execution_date=20181119T000000, start_date=20240403T142248, end_date=20240403T143103
+[2024-04-03T17:31:03.342+0300] {standard_task_runner.py:107} ERROR - Failed to execute job 1479 for task trigger_dag_task (Task received SIGTERM signal; 36080)
+[2024-04-03T17:31:03.368+0300] {process_utils.py:79} INFO - Process psutil.Process(pid=36080, status='terminated', exitcode=1, started='17:22:48') (36080) terminated with exit code 1

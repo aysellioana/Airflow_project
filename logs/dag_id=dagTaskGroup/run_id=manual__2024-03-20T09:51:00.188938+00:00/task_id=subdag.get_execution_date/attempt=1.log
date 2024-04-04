@@ -1,0 +1,52 @@
+[2024-03-28T10:09:08.126+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dagTaskGroup.subdag.get_execution_date manual__2024-03-20T09:51:00.188938+00:00 [queued]>
+[2024-03-28T10:09:08.155+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dagTaskGroup.subdag.get_execution_date manual__2024-03-20T09:51:00.188938+00:00 [queued]>
+[2024-03-28T10:09:08.155+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-28T10:09:08.169+0200] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): subdag.get_execution_date> on 2024-03-20 09:51:00.188938+00:00
+[2024-03-28T10:09:08.173+0200] {standard_task_runner.py:60} INFO - Started process 4500 to run task
+[2024-03-28T10:09:08.182+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dagTaskGroup', 'subdag.get_execution_date', 'manual__2024-03-20T09:51:00.188938+00:00', '--job-id', '902', '--raw', '--subdir', 'DAGS_FOLDER/subdag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpm9u6rim_']
+[2024-03-28T10:09:08.185+0200] {standard_task_runner.py:88} INFO - Job 902: Subtask subdag.get_execution_date
+[2024-03-28T10:09:08.306+0200] {task_command.py:423} INFO - Running <TaskInstance: dagTaskGroup.subdag.get_execution_date manual__2024-03-20T09:51:00.188938+00:00 [running]> on host C9843
+[2024-03-28T10:09:08.520+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dagTaskGroup' AIRFLOW_CTX_TASK_ID='subdag.get_execution_date' AIRFLOW_CTX_EXECUTION_DATE='2024-03-20T09:51:00.188938+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-20T09:51:00.188938+00:00'
+[2024-03-28T10:09:08.533+0200] {logging_mixin.py:188} WARNING - /usr/local/lib/python3.8/site-packages/airflow/utils/context.py:315 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-03-28T10:09:08.524+0200] {python.py:202} INFO - Done. Returned value was: 2024-03-20 09:51:00.188938+00:00
+[2024-03-28T10:09:08.563+0200] {xcom.py:664} ERROR - Object of type DateTime is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your airflow config or make sure to decorate your object with attr.
+[2024-03-28T10:09:08.565+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+  File "/usr/local/lib/python3.8/site-packages/airflow/serialization/serde.py", line 189, in serialize
+    raise TypeError(f"cannot serialize object of type {cls}")
+TypeError: cannot serialize object of type <class 'Proxy'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 451, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3010, in xcom_push
+    XCom.set(
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/xcom.py", line 247, in set
+    value = cls.serialize_value(
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/xcom.py", line 662, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/Cellar/python@3.8/3.8.18_2/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/json.py", line 104, in encode
+    return super().encode(o)
+  File "/usr/local/Cellar/python@3.8/3.8.18_2/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.8/3.8.18_2/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/json.py", line 93, in default
+    return super().default(o)
+  File "/usr/local/Cellar/python@3.8/3.8.18_2/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DateTime is not JSON serializable
+[2024-03-28T10:09:08.582+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dagTaskGroup, task_id=subdag.get_execution_date, execution_date=20240320T095100, start_date=20240328T080908, end_date=20240328T080908
+[2024-03-28T10:09:08.612+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 902 for task subdag.get_execution_date (Object of type DateTime is not JSON serializable; 4500)
+[2024-03-28T10:09:08.638+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-28T10:09:08.682+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

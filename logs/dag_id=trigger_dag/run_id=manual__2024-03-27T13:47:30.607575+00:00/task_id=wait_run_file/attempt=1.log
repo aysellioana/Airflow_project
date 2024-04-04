@@ -1,0 +1,16 @@
+[2024-03-27T15:47:36.399+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-27T13:47:30.607575+00:00 [queued]>
+[2024-03-27T15:47:36.433+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_run_file manual__2024-03-27T13:47:30.607575+00:00 [queued]>
+[2024-03-27T15:47:36.434+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-27T15:47:36.458+0200] {taskinstance.py:2214} INFO - Executing <Task(FileSensor): wait_run_file> on 2024-03-27 13:47:30.607575+00:00
+[2024-03-27T15:47:36.464+0200] {standard_task_runner.py:60} INFO - Started process 55537 to run task
+[2024-03-27T15:47:36.473+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_run_file', 'manual__2024-03-27T13:47:30.607575+00:00', '--job-id', '674', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpl0ul14c_']
+[2024-03-27T15:47:36.477+0200] {standard_task_runner.py:88} INFO - Job 674: Subtask wait_run_file
+[2024-03-27T15:47:36.647+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.wait_run_file manual__2024-03-27T13:47:30.607575+00:00 [running]> on host C9843
+[2024-03-27T15:47:36.983+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-03-27T13:47:30.607575+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-27T13:47:30.607575+00:00'
+[2024-03-27T15:47:37.004+0200] {base.py:83} INFO - Using connection ID 'fs_default' for task execution.
+[2024-03-27T15:47:37.005+0200] {filesystem.py:66} INFO - Poking for file /Users/abatcoveanu/airflow/dags/asd
+[2024-03-27T15:47:37.008+0200] {filesystem.py:71} INFO - Found File /Users/abatcoveanu/airflow/dags/asd last modified: 20240326153136
+[2024-03-27T15:47:37.009+0200] {base.py:295} INFO - Success criteria met. Exiting.
+[2024-03-27T15:47:37.086+0200] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=trigger_dag, task_id=wait_run_file, execution_date=20240327T134730, start_date=20240327T134736, end_date=20240327T134737
+[2024-03-27T15:47:37.150+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-27T15:47:37.257+0200] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

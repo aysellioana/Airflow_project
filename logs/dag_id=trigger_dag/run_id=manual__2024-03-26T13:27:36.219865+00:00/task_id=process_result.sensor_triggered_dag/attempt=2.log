@@ -1,0 +1,31 @@
+[2024-03-26T15:35:29.475+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:27:36.219865+00:00 [queued]>
+[2024-03-26T15:35:29.484+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:27:36.219865+00:00 [queued]>
+[2024-03-26T15:35:29.484+0200] {taskinstance.py:2193} INFO - Starting attempt 2 of 1
+[2024-03-26T15:35:29.513+0200] {taskinstance.py:2214} INFO - Executing <Task(ExternalTaskSensor): process_result.sensor_triggered_dag> on 2024-03-26 13:27:36.219865+00:00
+[2024-03-26T15:35:29.517+0200] {standard_task_runner.py:60} INFO - Started process 22359 to run task
+[2024-03-26T15:35:29.523+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'process_result.sensor_triggered_dag', 'manual__2024-03-26T13:27:36.219865+00:00', '--job-id', '594', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmpy4pvi9v9']
+[2024-03-26T15:35:29.525+0200] {standard_task_runner.py:88} INFO - Job 594: Subtask process_result.sensor_triggered_dag
+[2024-03-26T15:35:29.615+0200] {task_command.py:423} INFO - Running <TaskInstance: trigger_dag.process_result.sensor_triggered_dag manual__2024-03-26T13:27:36.219865+00:00 [running]> on host C9843
+[2024-03-26T15:35:29.732+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='process_result.sensor_triggered_dag' AIRFLOW_CTX_EXECUTION_DATE='2024-03-26T13:27:36.219865+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-26T13:27:36.219865+00:00'
+[2024-03-26T15:35:29.734+0200] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-03-26T13:22:36.219865+00:00 ... 
+[2024-03-26T15:36:29.745+0200] {external_task.py:260} INFO - Poking for DAG 'dag_id_3' on 2024-03-26T13:22:36.219865+00:00 ... 
+[2024-03-26T15:37:10.575+0200] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2024-03-26T15:37:10.596+0200] {process_utils.py:131} INFO - Sending 15 to group 22359. PIDs of all processes in the group: [22359]
+[2024-03-26T15:37:10.596+0200] {process_utils.py:86} INFO - Sending the signal 15 to group 22359
+[2024-03-26T15:37:10.597+0200] {taskinstance.py:2480} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-03-26T15:37:10.643+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/external_task.py", line 334, in execute
+    super().execute(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/sensors/base.py", line 293, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2482, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-03-26T15:37:10.667+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=trigger_dag, task_id=process_result.sensor_triggered_dag, execution_date=20240326T132736, start_date=20240326T133529, end_date=20240326T133710
+[2024-03-26T15:37:10.716+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 594 for task process_result.sensor_triggered_dag (Task received SIGTERM signal; 22359)
+[2024-03-26T15:37:10.734+0200] {process_utils.py:79} INFO - Process psutil.Process(pid=22359, status='terminated', exitcode=1, started='15:35:29') (22359) terminated with exit code 1

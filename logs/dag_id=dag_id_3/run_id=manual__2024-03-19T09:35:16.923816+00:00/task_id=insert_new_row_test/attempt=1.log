@@ -1,0 +1,36 @@
+[2024-03-19T11:35:44.908+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_id_3.insert_new_row_test manual__2024-03-19T09:35:16.923816+00:00 [queued]>
+[2024-03-19T11:35:44.916+0200] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_id_3.insert_new_row_test manual__2024-03-19T09:35:16.923816+00:00 [queued]>
+[2024-03-19T11:35:44.917+0200] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-19T11:35:44.927+0200] {taskinstance.py:2214} INFO - Executing <Task(PostgresOperator): insert_new_row_test> on 2024-03-19 09:35:16.923816+00:00
+[2024-03-19T11:35:44.931+0200] {standard_task_runner.py:60} INFO - Started process 16270 to run task
+[2024-03-19T11:35:44.937+0200] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'dag_id_3', 'insert_new_row_test', 'manual__2024-03-19T09:35:16.923816+00:00', '--job-id', '359', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/var/folders/t6/vwjsg0jx26jcjdwn_gxhbjzc0000gp/T/tmp5j1di84d']
+[2024-03-19T11:35:44.940+0200] {standard_task_runner.py:88} INFO - Job 359: Subtask insert_new_row_test
+[2024-03-19T11:35:45.020+0200] {task_command.py:423} INFO - Running <TaskInstance: dag_id_3.insert_new_row_test manual__2024-03-19T09:35:16.923816+00:00 [running]> on host C9843
+[2024-03-19T11:35:45.174+0200] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_id_3' AIRFLOW_CTX_TASK_ID='insert_new_row_test' AIRFLOW_CTX_EXECUTION_DATE='2024-03-19T09:35:16.923816+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-19T09:35:16.923816+00:00'
+[2024-03-19T11:35:45.177+0200] {sql.py:276} INFO - Executing: SELECT * FROM ab_users
+[2024-03-19T11:35:45.208+0200] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-03-19T11:35:45.257+0200] {base.py:83} INFO - Using connection ID 'Postgres_db' for task execution.
+[2024-03-19T11:35:45.264+0200] {sql.py:457} INFO - Running statement: SELECT * FROM ab_users, parameters: [57500358, 'abatcoveanu', datetime.datetime(2024, 3, 19, 11, 35, 44, 289276)]
+[2024-03-19T11:35:45.266+0200] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 404, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/usr/local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 460, in _run_command
+    cur.execute(sql_statement, parameters)
+psycopg2.errors.UndefinedTable: relation "ab_users" does not exist
+LINE 1: SELECT * FROM ab_users
+                      ^
+
+[2024-03-19T11:35:45.281+0200] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dag_id_3, task_id=insert_new_row_test, execution_date=20240319T093516, start_date=20240319T093544, end_date=20240319T093545
+[2024-03-19T11:35:45.314+0200] {standard_task_runner.py:107} ERROR - Failed to execute job 359 for task insert_new_row_test (relation "ab_users" does not exist
+LINE 1: SELECT * FROM ab_users
+                      ^
+; 16270)
+[2024-03-19T11:35:45.322+0200] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-19T11:35:45.361+0200] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
